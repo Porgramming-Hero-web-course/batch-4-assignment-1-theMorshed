@@ -22,3 +22,53 @@ if (typeof value === "string") {
     // this is a boolean data type
 }
 ```
+
+## 2. `in` Guards
+
+You can check a key exists in a certain object using this guard. An example below.
+
+### Example
+
+```typescript
+const person = {
+	name: "morshed",
+	age: 30,
+	email: "morshed@gmail.com",
+	phone: "024232323232"
+}
+
+if ("name" in person) {
+	console.log(person.name);
+}
+```
+
+## 3. `instanceof` Guards
+
+When you working with OOP and you want to check an object is a instance of a certain class then instanceof type guard are useful. examples here
+
+### Example
+
+```typescript
+class Person {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+const morshed = new Person("morshed", 32);
+
+if (morshed instanceof Person) {
+    console.log("morshed object is created by Person class.");
+} else {
+    console.log("morshed object is not created by Person class");
+}
+```
+
+# Summary
+By using type guards of typescript, you can narrow down your type to a more specific type which can help you catch errors before your code runs. So, I will recommend you to always use type guard to make your code robust and bug-free.
+
+Thanks for reading...
