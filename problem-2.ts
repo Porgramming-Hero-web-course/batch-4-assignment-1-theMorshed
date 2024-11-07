@@ -5,7 +5,7 @@ function removeDuplicates(nums: number[]): number[] {
         if (!uniqueNums.includes(num)) {
             uniqueNums.push(num);
         }
-    })
+    });
     return uniqueNums;
 }
 
