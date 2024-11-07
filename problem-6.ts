@@ -4,11 +4,8 @@ interface Profile {
     email: string;
 }
 
-function updateProfile(profile: Profile, update: Partial<Object>): Profile {
-    const [updateKey] = Object.keys(update);
-    const [updateValue] = Object.values(update);
-    profile[updateKey] = updateValue;
-    return profile;
+function updateProfile(profile: Profile, update: Partial<Profile>): Profile {
+    return {...profile, ...update};
 }
 
 const myProfile = { name: "Alice", age: 25, email: "alice@example.com" };
