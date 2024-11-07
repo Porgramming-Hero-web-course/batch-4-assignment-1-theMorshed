@@ -20,7 +20,7 @@ function calculateShapeArea(userShape: CircleOrRectangle): number {
     if (userShape.shape === "circle") {
         area = Math.PI * userShape.radius * userShape.radius;
     }
-    else if (userShape.shape == "rectangle") {
+    else if (userShape.shape === "rectangle") {
         area = userShape.width * userShape.height;
     }
     return area;
