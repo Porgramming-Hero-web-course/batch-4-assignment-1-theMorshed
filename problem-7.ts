@@ -9,9 +9,9 @@ class Car {
         this.year = year;
     }
 
-    getCarAge() {
-        let currentTime = new Date();
-        return currentTime.getFullYear() - this.year;
+    getCarAge(): number {
+        let currentYear = new Date().getFullYear();
+        return currentYear - this.year;
     }
 }
 
